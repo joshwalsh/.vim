@@ -23,11 +23,59 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
 
-" Status bar
-set laststatus=2
+set cursorline                " show a line at the row of the cursor
+set cursorcolumn              " show a line at the column of the cursor
+set directory=/tmp      " Where temporary files will go.
+set splitright
+set splitbelow
 
 " Change leader to ,
 let mapleader=","
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
+
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" Turn of highlighting after search
+map <C-l> :noh<CR>
+
+" Control-c is Escape
+map <C-c> <esc>
+
+" Reuse open buffers when opening a file that's already open
+set switchbuf=useopen
+
+" Status line setup
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Show Line Numbers
+map <leader>ln :set number!<CR>
+
+" <leader><leader> switches to the last buffer used
+map <leader><leader> <C-^>
+
+" Show invisible characters
+set list listchars=tab:\ \ ,trail:·,nbsp:%,extends:>,precedes:<
+map <F6> :set nolist!<CR>:set nolist?<CR>
+imap <F6> <ESC>:set nolist!<CR>:set nolist?<CR>a
+
+" Clear all trailing spaces
+fun! ClearAllTrailingSpaces()
+  %s/\s\+$//
+endfun
+map <leader>c :call ClearAllTrailingSpaces()<CR>
+
+" visual shifting (builtin-repeat)
+vnoremap < <gv
+vnoremap > >gv
 
 " Include Sandstone Stuff
 source ~/.vim/sandstone
