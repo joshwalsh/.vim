@@ -53,9 +53,6 @@ map <C-c> <esc>
 " Reuse open buffers when opening a file that's already open
 set switchbuf=useopen
 
-" Status line setup
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 " Show Line Numbers
 map <leader>ln :set number!<CR>
 
