@@ -1,0 +1,8 @@
+autocmd BufRead *.htm.template set filetype=html
+autocmd BufRead *.htm.layout set filetype=html
+autocmd BufRead *.css.template set filetype=css
+autocmd BufRead *.css.layout set filetype=css
+autocmd BufRead *.js.template set filetype=javascript
+autocmd BufRead *.js.layout set filetype=javascript
+autocmd BufRead *.json.template set filetype=javascript
+autocmd BufRead *.json.layout set filetype=javascript
