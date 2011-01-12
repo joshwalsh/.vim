@@ -1,20 +1,19 @@
+" Disable the toolbar and scroll bars
+set guioptions=egm
+
+set antialias
+
+set guifont=menlo:h12
+set linespace=1
+
+set lines=405
+set columns=160
+set transparency=0
+
 " Fullscreen takes up entire screen
+set fuoptions=maxhorz,maxvert
 
 if has("gui_macvim")
-  set fuoptions=maxhorz,maxvert
-  " Command-T for CommandT
-  " macmenu &File.New\ Tab key=<nop>
-  macmenu &File.Open\ Tab\.\.\. key=<nop>
-  map <D-T> :CommandT<CR>
-
-  " Command-Shift-F for Ack
-  " macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
-  macmenu Edit.Find.Find\.\.\. key=<nop>
-  map <D-f> :Ack<space>
-
-  " Command-e for ConqueTerm
-  map <D-e> :call StartTerm()<CR>
-
   " Command-/ to toggle comments
   map <D-/> <plug>NERDCommenterToggle<CR>
 endif
@@ -24,4 +23,3 @@ set guioptions-=T
 
 " Default gui color scheme
 color ir_black
-
