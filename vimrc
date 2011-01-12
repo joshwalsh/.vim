@@ -74,5 +74,9 @@ map <leader>c :call ClearAllTrailingSpaces()<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" NERDTree configuration
+let NERDTreeIgnore=['\.rbc$', '\~$']
+
+map <Leader>n :NERDTreeToggle<CR>
 " Include Sandstone Stuff
 source ~/.vim/sandstone
