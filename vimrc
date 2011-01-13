@@ -78,5 +78,9 @@ vnoremap > >gv
 let NERDTreeIgnore=['\.rbc$', '\~$']
 
 map <Leader>n :NERDTreeToggle<CR>
+
+" Setup vimwiki to store in dropbox
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
+
 " Include Sandstone Stuff
 source ~/.vim/sandstone
