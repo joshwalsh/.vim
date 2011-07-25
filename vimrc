@@ -92,3 +92,6 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Include Sandstone Stuff
 source ~/.vim/sandstone
+"
+" Default gui color scheme
+color ir_black
