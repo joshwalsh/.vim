@@ -29,6 +29,8 @@ set directory=/tmp      " Where temporary files will go.
 set splitright
 set splitbelow
 
+set noswapfile
+
 " Change leader to ,
 let mapleader=","
 
@@ -94,4 +96,7 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 source ~/.vim/sandstone
 "
 " Default gui color scheme
-color ir_black
+color tir_black
+
+" Make paste work
+imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
