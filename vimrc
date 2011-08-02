@@ -77,9 +77,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
+" let NERDTreeIgnore=['\.rbc$', '\~$']
 
-map <Leader>n :NERDTreeToggle<CR>
+" map <Leader>n :NERDTreeToggle<CR>
 
 " Setup vimwiki to store in dropbox
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
@@ -100,3 +100,11 @@ color tir_black
 
 " Make paste work
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
+
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
