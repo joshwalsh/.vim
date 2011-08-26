@@ -22,7 +22,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+color moria
 set guifont=Monaco:h9
 
 " Disable netrw's autocmd, since we're ALWAYS using NERDTree
