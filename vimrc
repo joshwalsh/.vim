@@ -19,10 +19,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc
-
 set cursorline                " show a line at the row of the cursor
 set cursorcolumn              " show a line at the column of the cursor
 set directory=/tmp      " Where temporary files will go.
@@ -87,10 +83,6 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Include Sandstone Stuff
 source ~/.vim/sandstone
