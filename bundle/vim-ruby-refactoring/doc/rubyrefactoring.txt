@@ -1,4 +1,8 @@
-Ruby Refactoring Tool for Vim
+*rubyrefactoring.txt*  Ruby Refactoring Tool for Vim
+
+Author:  Enrique Comba Riepenhausen         *rubyrefactoring-author*
+
+INTRODUCTION                                *rubyrefactoring*
 
 I love vim! It's my editor of choice when I am developing software.
 
@@ -19,24 +23,29 @@ a couple of weeks later.
 So now I have decided to code this in vim script, but I am not sure how far
 I will go with it (clone at your own risk).
 
-N.B. 'Rename Local Variable', 'Rename Instance Variable' and 'ExtractMethod' require matchit.vim:
+Enrique Comba Riepenhausen
 
-http://www.vim.org/scripts/script.php?script_id=39
+COMMANDS                                    *rubyrefactoring-commands*
 
 Implemented commands/patterns:
 
-:RAddParameter           - Add Parameter 
-:RInlineTemp             - Inline Temp
-:RConvertPostConditional - Convert Post Conditional
-:RExtractConstant        - Extract Constant          (visual selection)
-:RExtractLet             - Extract to Let (Rspec)
-:RExtractLocalVariable   - Extract Local Variable    (visual selection)
-:RRenameLocalVariable    - Rename Local Variable     (visual selection/variable under the cursor, *REQUIRES matchit.vim*)
-:RRenameInstanceVariable - Rename Instance Variable  (visual selection, *REQUIRES matchit.vim*)
-:RExtractMethod          - Extract Method            (visual selection, *REQUIRES matchit.vim*)
+Command                    Refactoring	              Notes ~
+:RAddParameter             Add Parameter     
+:RInlineTemp		   Inline Temp
+:RConvertPostConditional   Convert Post Conditional
+:RExtractConstant	   Extract Constant           visual selection
+:RExtractLet               Extract to Let (Rspec)
+:RExtractLocalVariable     Extract Local Variable     visual selection
+:RRenameLocalVariable      Rename Local Variable      visual selection or 
+                                                      variable under cursor 
+:RRenameInstanceVariable   Rename Instance Variable   visual selection  
+:RExtractMethod            Extract Method             visual selection
+
+NOTE: Rename Instance Variable and Rename Local Variable require matchit.vim
+
+MAPPINGS                                    *rubyrefactoring-mappings*
 
 Default bindings:
-
 :nnoremap <leader>rap  :RAddParameter<cr>
 :nnoremap <leader>rcpc :RConvertPostConditional<cr>
 :nnoremap <leader>rel  :RExtractLet<cr>
@@ -47,8 +56,8 @@ Default bindings:
 :vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 :vnoremap <leader>rem  :RExtractMethod<cr>
 
-Additional usage examples (thanks Justin!):
+ADDITIONAL USAGE EXAMPLES                   *rubyrefactoring-usageexamples*
 
 http://justinram.wordpress.com/2010/12/30/vim-ruby-refactoring-series/
 
-Enrique Comba Riepenhausen & Paul King
+

@@ -1,4 +1,3 @@
-" Ruby Refactoring in VIM
 "
 " Author: Enrique Comba Riepenhausen (@ecomba) & Paul King (@nrocy)
 " Email: enrique@edendevelopment.co.uk
@@ -21,6 +20,7 @@ exec 'runtime ' . expand('<sfile>:p:h') . '/refactorings/general/*.vim'
 " TODO: Do we even need this prefix? How likely is it that we'll conflict?
 
 command! RAddParameter                  call AddParameter()
+command! RAddParameterNB                call AddParameterNB()
 command! RInlineTemp                    call InlineTemp()
 command! RExtractLet                    call ExtractIntoRspecLet()
 command! RConvertPostConditional        call ConvertPostConditional()
@@ -37,6 +37,7 @@ command! -range RExtractMethod          call ExtractMethod()
 " E.g. Extract Method is mapped to <leader>rem
 
 nnoremap <leader>rap  :RAddParameter<cr>
+nnoremap <leader>rapn :RAddParameterNB<cr>
 nnoremap <leader>rit  :RInlineTemp<cr>
 nnoremap <leader>rel  :RExtractLet<cr>
 nnoremap <leader>rcpc :RConvertPostConditional<cr>
