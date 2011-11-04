@@ -73,9 +73,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 " NERDTree configuration
-" let NERDTreeIgnore=['\.rbc$', '\~$']
+let NERDTreeIgnore=['\.rbc$', '\~$']
 
-" map <Leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 
 " Setup vimwiki to store in dropbox
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
