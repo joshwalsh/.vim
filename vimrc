@@ -72,14 +72,6 @@ map <leader>c :call ClearAllTrailingSpaces()<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
-
-map <Leader>n :NERDTreeToggle<CR>
-
-" Setup vimwiki to store in dropbox
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
-
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
