@@ -24,6 +24,10 @@ set guioptions-=T
 " Default gui color scheme
 color moria
 set guifont=Monaco:h9
+"
+" Default gui color scheme
+set background=light
+colorscheme solarized
 
 " Disable netrw's autocmd, since we're ALWAYS using NERDTree
 runtime plugin/netRwPlugin.vim

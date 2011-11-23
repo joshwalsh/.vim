@@ -88,7 +88,7 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 source ~/.vim/sandstone
 "
 " Default gui color scheme
-color tir_black
+colorscheme tir_black
 
 " Make paste work
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
