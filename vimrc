@@ -84,6 +84,9 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
+"Command T Ignore
+:set wildignore+=tmp,.git
+
 " Include Sandstone Stuff
 source ~/.vim/sandstone
 "
