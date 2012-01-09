@@ -57,6 +57,13 @@ map <leader>ln :set number!<CR>
 " <leader><leader> switches to the last buffer used
 map <leader><leader> <C-^>
 
+" Flush CommandT whenever saving file or window gets focus
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
+
 " Show invisible characters
 set list listchars=tab:\ \ ,trail:·,nbsp:%,extends:>,precedes:<
 map <F6> :set nolist!<CR>:set nolist?<CR>
@@ -84,6 +91,9 @@ colorscheme tir_black
 
 " Make paste work
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
+
+" NerdTree
+map <Leader>n :NERDTreeToggle <CR>
 
 set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
