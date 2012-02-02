@@ -95,6 +95,11 @@ imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
 " NerdTree
 map <Leader>n :NERDTreeToggle <CR>
 
+" map space to toggle foldings
+set foldmethod=syntax
+set foldlevel=1
+nnoremap <space> za
+
 set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will

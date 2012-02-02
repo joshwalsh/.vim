@@ -3,7 +3,7 @@ set guioptions=egm
 
 set antialias
 
-set guifont=menlo:h12
+set guifont=menlo:h16
 set linespace=1
 
 set lines=405
